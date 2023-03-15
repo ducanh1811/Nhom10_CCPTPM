@@ -1,0 +1,46 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=Tilt+Neon&family=Tilt+Warp&display=swap');
+
+:root {
+    --primary: #fe2c55;
+    --black: rgb(22, 24, 35);
+    --text-href: #333;
+    // Deault layout header height:
+    --header-height: 60px;
+    --layout-width: 1150px;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Tilt Neon', cursive;
+    font-family: 'Tilt Warp', cursive;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Tilt Neon', cursive;
+    font-family: 'Tilt Warp', cursive;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--text-href);
+    text-rendering: optimizeSpeed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-href);
+    text-decoration: none;
+}
