@@ -5,7 +5,8 @@
 * Phan Văn Đức Anh - 20110609
 * Bùi Đặng Quốc Chí - 20110614
 
-## Framework: react phiên bản 18.0
+## Framework
+* React phiên bản 18.0
 
 
 ## Ngôn ngữ sử dụng
