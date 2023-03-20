@@ -1,0 +1,8 @@
+Lựa chọn framework. Framework nhóm lựa chọn : React ,js. Phiên bản react 18.0.
+ReactJS là một trong những framework phổ biến nhất cho việc phát triển ứng dụng web đơn trang (Single Page Application - SPA).
+Một số đặc điểm của ReactJS bao gồm:
+
+Thành phần (component) được sử dụng để phát triển UI, giúp tách biệt logic và giao diện.
+Virtual DOM (Document Object Model) giúp cải thiện hiệu suất và tăng tốc độ trải nghiệm người dùng.
+JSX (JavaScript XML) là một phần mở rộng của JavaScript, cho phép viết code HTML và CSS trong JavaScript.
+Hỗ trợ cập nhật dữ liệu tự động thông qua State và Props.

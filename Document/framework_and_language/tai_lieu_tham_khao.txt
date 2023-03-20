@@ -1,0 +1,15 @@
+Tìm các tài liệu về hướng dẫn hỗ trợ cho framework
+
+Dưới đây là một số tài liệu hữu ích để tìm hiểu về ReactJS:
+
+Trang chủ của ReactJS: https://reactjs.org/ - Trang chủ của ReactJS cung cấp các tài liệu và tutorial chính thức để học ReactJS, bao gồm các khái niệm cơ bản, component, props, state, lifecycle methods, JSX, và nhiều hơn nữa.
+
+ReactJS Documentation: https://reactjs.org/docs/getting-started.html - Tài liệu chính thức của ReactJS cung cấp một loạt các bài viết về các khái niệm cơ bản của ReactJS, bao gồm component, props, state, events, JSX, và nhiều hơn nữa.
+
+Create React App: https://create-react-app.dev/docs/getting-started/ - Create React App là một công cụ giúp tạo một ứng dụng ReactJS mới nhanh chóng và dễ dàng. Trang web cung cấp hướng dẫn chi tiết để bắt đầu với Create React App và tạo một ứng dụng ReactJS đơn giản.
+
+React Router: https://reactrouter.com/web/guides/quick-start - React Router là một thư viện hỗ trợ điều hướng trong ứng dụng ReactJS. Trang web cung cấp hướng dẫn chi tiết để bắt đầu sử dụng React Router và xây dựng một ứng dụng với các route khác nhau.
+
+Redux: https://redux.js.org/introduction/getting-started - Redux là một thư viện quản lý trạng thái trong ứng dụng ReactJS. Trang web cung cấp hướng dẫn chi tiết để bắt đầu sử dụng Redux và quản lý trạng thái của ứng dụng.
+
+Material UI: https://material-ui.com/getting-started/installation/ - Material UI là một thư viện UI cho ứng dụng ReactJS, cung cấp các thành phần thường được sử dụng trong thiết kế UI như button, form, table, và nhiều hơn nữa. Trang web cung cấp hướng dẫn chi tiết để bắt đầu sử dụng Material UI và thiết kế một giao diện đơn giản
