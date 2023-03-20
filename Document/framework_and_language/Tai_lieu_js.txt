@@ -1,0 +1,16 @@
+MDN web docs: Đây là nguồn tài liệu chính thức của Mozilla về JavaScript, cung cấp mọi thông tin về các tính năng của JavaScript và cách sử dụng chúng. Bạn cũng có thể tìm thấy các ví dụ mã nguồn và các hướng dẫn cụ thể cho các chức năng riêng lẻ. Địa chỉ trang web: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+W3Schools: Trang web này cung cấp các bài học, ví dụ và bài kiểm tra về JavaScript. Nó là một nguồn tài liệu tuyệt vời cho người mới bắt đầu học JavaScript. Địa chỉ trang web: https://www.w3schools.com/js/
+
+Stack Overflow: Đây là cộng đồng lập trình viên lớn nhất trên thế giới, với hàng triệu người dùng sử dụng mỗi ngày. Stack Overflow có thể giúp bạn tìm kiếm câu trả lời cho các câu hỏi liên quan đến JavaScript và các vấn đề khác liên quan đến lập trình. Địa chỉ trang web: https://stackoverflow.com/questions/tagged/javascript
+
+JavaScript.info: Trang web này cung cấp các bài học, các hướng dẫn và các trò chơi giúp bạn học JavaScript một cách nhanh chóng và dễ dàng. Địa chỉ trang web: https://javascript.info/
+
+GitHub: Đây là một trang web nổi tiếng cho phép bạn tìm kiếm, tải xuống và chia sẻ mã nguồn mở. Bạn có thể tìm thấy các dự án liên quan đến JavaScript trên GitHub và xem mã nguồn của chúng để học hỏi và áp dụng vào công việc của mình. Địa chỉ trang web: https://github.com/
+
+Đối với việc khắc phục lỗi, đây là một số nguồn bạn có thể tham khảo:
+
+Stack Overflow: Như đã đề cập ở trên, Stack Overflow có thể giúp bạn tìm kiếm câu trả lời cho các lỗi liên quan đến JavaScript. Hãy đăng câu hỏi của bạn và đợi sự giúp đỡ từ cộng đồng lập trình viên.
+
+Google Developers: Trang web này cung cấp các lời khuyên và hướng dẫn cho việc khắc phục các lỗi liên quan đến JavaScript. Địa chỉ trang web: https://developers.google.com/web/tools/chrome-devtools/debug/common-issues
+
