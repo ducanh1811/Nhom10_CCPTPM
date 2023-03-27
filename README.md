@@ -1,4 +1,6 @@
 # Nhom10_CCPTPM
+## Tên đề tài:
+Phát triển giao diện, xử lý cho hệ thống tương tự https://www.talkdesk.com/cloud-contact-center/customer-experience-analytics/ 
 
 ## Thành viên
 * Võ Hồng Khang - 20110281
