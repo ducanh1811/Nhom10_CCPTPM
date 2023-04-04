@@ -3,25 +3,23 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+    faGridRound as faAppleWhole,
+    faGraduationCap as graduationCap,
+    faCaretDown as caretDown,
     faPersonRifle as user,
     faCircleXmark as close,
     faSpinner as loading,
     faMagnifyingGlass as search,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
-import images from '~/assets/images';
+import iconapp from '~/assets/images';
+import logo from '~/assets/images/logo.jpeg';
+import avatar from '~/assets/images/newcv.jpg';
 import { Wrapper as PopperWrapper } from '~/Components/Popper';
 
 const cx = classNames.bind(styles);
+
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([1, 2, 3]);
-        }, 0);
-    }, []);
-
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -31,7 +29,7 @@ function Header() {
                         window.location.href = '/';
                     }}
                 >
-                    <img src={images.logo} alt="talkdesk" />
+                    <img src={logo} alt="talkdaesk" />
                 </div>
                 <div
                     className={cx('menu')}
@@ -39,40 +37,57 @@ function Header() {
                         console.log('Enter');
                     }}
                 >
-                    <ul>PRODUCTS</ul>
-                    <ul>SOLUTIONS</ul>
-                    <ul>CUSTOMERS</ul>
-                    <ul>SUPPORT</ul>
-                    <ul>RESOURCES</ul>
-                    <ul>ABOUT</ul>
+                    <ul>Calls</ul>
+                    <ul>Contacts</ul>
+                    <ul>Voicemail</ul>
+                    <ul>Teams</ul>
+                    <ul>Reporting</ul>
+                    <ul>Admin</ul>
                 </div>
                 <div className={cx('actions')}>
-                    <a
-                        href="https://www.talkdesk.com/login"
-                        className={cx('login')}
-                        title="Talkdesk Enterprise Platform Login page"
-                    >
-                        {' '}
+                    <div className={cx('app')}>
+                        <img src={iconapp.icon_app} alt="icon_app" />
+                        <div className={cx('text_app')}>Apps</div>
                         <FontAwesomeIcon
+                            icon={caretDown}
                             style={{
-                                fontSize: '20px',
-                                color: '#5405bd',
-                                margin: '10px',
+                                color: '#ffffff',
+                                fontSize: '12px',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                display: 'flex',
                             }}
-                            icon={user}
-                        />{' '}
-                    </a>
-                    <button className={cx('search')} title="Search">
-                        {' '}
+                        />
+                    </div>
+                    <div className={cx('browser')}>
+                        <div className={cx('text_app')}>Browser mode</div>
                         <FontAwesomeIcon
+                            icon={caretDown}
                             style={{
-                                fontSize: '20px',
-                                color: '#5405bd',
-                                margin: '10px',
+                                color: '#ffffff',
+                                fontSize: '12px',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                display: 'flex',
                             }}
-                            icon={search}
-                        />{' '}
-                    </button>
+                        />
+                    </div>
+                    <div className={cx('avatar')}>
+                        <div className={cx('image_avatar')}>
+                            <img src={avatar} alt="icon_avatar" />
+                        </div>
+                        <div className={cx('text_app')}>Avallable</div>
+                        <FontAwesomeIcon
+                            icon={caretDown}
+                            style={{
+                                color: '#ffffff',
+                                fontSize: '12px',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                display: 'flex',
+                            }}
+                        />
+                    </div>
                 </div>
             </div>
         </header>
