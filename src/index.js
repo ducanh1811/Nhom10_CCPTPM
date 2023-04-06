@@ -3,13 +3,47 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
+import { Login, CheckLogin } from '~/Components/Layout';
 import GlobalStyle from '~/Components/GlobalStyles/GlobalStyle';
+import {
+    Navigate,
+    Outlet,
+    BrowserRouter as Router,
+    RouterProvider as RouterProvider,
+    createBrowserRouter,
+} from 'react-router-dom';
+import Home from '~/pages/Home/home';
+
+const myRouter = createBrowserRouter([
+    {
+        path: '/home',
+        element: (
+            <>
+                <CheckLogin>
+                    <Home />
+                </CheckLogin>
+                {/* <Outlet />
+                <Button type="primary" ghost>
+                    Primary
+                </Button>
+                <Button icon={<SearchOutlined />}>Search</Button> */}
+            </>
+        ),
+    },
+    {
+        path: '/login',
+        element: (
+            <>
+                <Login />
+            </>
+        ),
+    },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <GlobalStyle>
-            <App />
-        </GlobalStyle>
+        <RouterProvider router={myRouter} />
     </React.StrictMode>,
 );
 

@@ -1,14 +1,13 @@
 // Description: This file contains all the routes of the application
-import Home from '~/pages/Home';
+import Home from '~/pages/Home/home';
 import Profile from '~/pages/Profile';
 import Following from '~/pages/Following';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
-import { HeaderOnly } from '~/Components/Layout';
 // publicRoutes: Routes that are accessible to all users
 const publicRoutes = [
     {
-        path: '/',
+        path: '/home',
         element: <Home />,
     },
     {
@@ -22,7 +21,6 @@ const publicRoutes = [
     {
         path: '/upload',
         element: <Upload />,
-        layout: HeaderOnly,
     },
     {
         path: '/search',

@@ -1,2 +1,3 @@
-export { default as DefaultLayout } from './DefaultLayout';
-export { default as HeaderOnly } from './HeaderOnly';
+export { default as Login } from './Login';
+export { default as CheckLogin } from './CheckLogin';
+export { default as Header } from './Header';
