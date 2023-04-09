@@ -138,7 +138,7 @@ const data = [
 export default function SimpleTreemap() {
     return (
         <Treemap
-            width={400}
+            width={300}
             height={200}
             data={data}
             dataKey="size"

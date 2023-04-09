@@ -81,8 +81,8 @@ export default function LegendEffectOpacity() {
     return (
         <div>
             <LineChart
-                width={500}
-                height={300}
+                width={400}
+                height={250}
                 data={data}
                 margin={{
                     top: 5,
@@ -113,7 +113,6 @@ export default function LegendEffectOpacity() {
                     stroke="#82ca9d"
                 />
             </LineChart>
-            <p className="notes">Tips: Hover the legend !</p>
         </div>
     );
 }

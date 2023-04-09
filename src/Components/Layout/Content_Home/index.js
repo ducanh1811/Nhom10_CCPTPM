@@ -29,7 +29,7 @@ const cx = classNames.bind(styles);
 function Content_Home() {
     return (
         <div className={cx('content')}>
-            <div className={cx('content_1')}>
+            <div className={cx('content_1_top')}>
                 <div className={cx('content_2')}>
                     <div className={cx('content_3')}>
                         <div className={cx('content_4')}>
@@ -43,7 +43,7 @@ function Content_Home() {
                             <div className={cx('icon-menu')}>b</div>
                         </div>
                     </div>
-                    <div className={cx('content3-bot')}>241</div>
+                    <div className={cx('content3-bot')}>541</div>
                 </div>
                 <div className={cx('content_2')}>
                     <div className={cx('content_3')}>
@@ -64,6 +64,42 @@ function Content_Home() {
                     <div className={cx('content_3')}>
                         <div className={cx('content_4')}>
                             <div className={cx('content_5')}>
+                                Average wait time
+                            </div>
+                            <div className={cx('content_5')}>a Today</div>
+                        </div>
+                        <div className={cx('content_4_right')}>
+                            <div className={cx('icon-search')}>a</div>
+                            <div className={cx('icon-menu')}>b</div>
+                        </div>
+                    </div>
+                    <div className={cx('content3-bot')}>
+                        <PieChartWithCustomizedLabel />
+                    </div>
+                </div>
+                <div className={cx('content_2')}>
+                    <div className={cx('content_3')}>
+                        <div className={cx('content_4')}>
+                            <div className={cx('content_5')}>
+                                Longest wait time
+                            </div>
+                            <div className={cx('content_5')}>a Today</div>
+                        </div>
+                        <div className={cx('content_4_right')}>
+                            <div className={cx('icon-search')}>a</div>
+                            <div className={cx('icon-menu')}>b</div>
+                        </div>
+                    </div>
+                    <div className={cx('content3-bot')}>
+                        <PieChartWithPaddingAngle />
+                    </div>
+                </div>
+            </div>
+            <div className={cx('content_1_bot')}>
+                <div className={cx('content_2')}>
+                    <div className={cx('content_3')}>
+                        <div className={cx('content_4')}>
+                            <div className={cx('content_5')}>
                                 Agents total contacts
                             </div>
                             <div className={cx('content_5')}>a Today</div>
@@ -73,7 +109,9 @@ function Content_Home() {
                             <div className={cx('icon-menu')}>b</div>
                         </div>
                     </div>
-                    <div className={cx('content3-bot')}>241</div>
+                    <div className={cx('.content3-bot-content')}>
+                        <LegendEffectOpacity />
+                    </div>
                 </div>
                 <div className={cx('content_2')}>
                     <div className={cx('content_3')}>
@@ -88,11 +126,10 @@ function Content_Home() {
                             <div className={cx('icon-menu')}>b</div>
                         </div>
                     </div>
-                    <div className={cx('content3-bot')}>241</div>
+                    <div className={cx('.content3-bot-content')}>
+                        <SimpleTreemap />
+                    </div>
                 </div>
-            </div>
-            <div className={cx('content_1')}>
-                <div className={cx('content_2')}>B</div>
             </div>
         </div>
     );
