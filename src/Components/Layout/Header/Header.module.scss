@@ -10,13 +10,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    font-weight: 500;
     background: #440597;
 }
 
 .inner {
     height: 100%;
+    margin: 0 3%;
     display: flex;
     align-items: center;
     width: var(--layout-width, 1150px);
@@ -28,7 +28,6 @@
     display: flex;
     flex-direction: row;
     justify-content: start;
-    margin-left: 5%;
     flex: 1;
     width: 10px;
     // Con chuột hình ngón tay
@@ -171,5 +170,14 @@
         align-self: center;
         align-items: center;
         margin: 0 10px;
+    }
+}
+
+.logout {
+    color: #fff;
+    margin: 20px;
+    font: 15px sans-serif;
+    &:hover {
+        cursor: pointer;
     }
 }

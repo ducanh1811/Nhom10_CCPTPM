@@ -1,29 +1,19 @@
-import {
-    PieChartWithNeedle,
-    SimpleTreemap,
-    PieChartWithPaddingAngle,
-    PieChartWithCustomizedLabel,
-    BarChartNoPadding,
-    LegendEffectOpacity,
-} from '~/Components/chart';
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
+import {
+    Login,
+    CheckLogin,
+    Header,
+    Top,
+    Content_Home,
+} from '~/Components/Layout';
 function Home() {
     const cx = classNames.bind(styles);
     return (
         <>
-            <div className={cx('content')}>
-                <div className={cx('inarow')}>
-                    <PieChartWithNeedle />
-                    <SimpleTreemap />
-                    <LegendEffectOpacity />
-                </div>
-                <div className={cx('inarow')}>
-                    <PieChartWithCustomizedLabel />
-                    <PieChartWithPaddingAngle />
-                    <BarChartNoPadding />
-                </div>
-            </div>
+            <Header />
+            <Top />
+            <Content_Home />
         </>
     );
 }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
-import { Login, CheckLogin } from '~/Components/Layout';
+import { Login, CheckLogin, Header } from '~/Components/Layout';
 import GlobalStyle from '~/Components/GlobalStyles/GlobalStyle';
 import {
     Navigate,

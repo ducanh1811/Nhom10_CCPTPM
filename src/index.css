@@ -8,8 +8,8 @@ body {
 
     /* background: linear-gradient(120deg, #3ca7ee, #9b408f); */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: top;
     min-height: 100vh;
 }
 

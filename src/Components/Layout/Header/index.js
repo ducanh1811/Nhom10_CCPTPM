@@ -88,6 +88,19 @@ function Header() {
                             }}
                         />
                     </div>
+
+                    <div className={cx('avatar')}>
+                        <div
+                            className={cx('logout')}
+                            onClick={() => {
+                                console.log('Logout');
+                                localStorage.removeItem('isLogin');
+                                window.location.href = '/login';
+                            }}
+                        >
+                            Logout
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
