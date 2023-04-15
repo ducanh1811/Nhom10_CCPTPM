@@ -13,22 +13,28 @@ import {
     createBrowserRouter,
 } from 'react-router-dom';
 import Home from '~/pages/Home/home';
+import Explore from '~/pages/Explore/explore';
 
 const myRouter = createBrowserRouter([
     {
-        path: '/home',
+        path: '/',
         element: (
             <>
                 <CheckLogin>
-                    <Home />
+                    <Outlet />
                 </CheckLogin>
-                {/* <Outlet />
-                <Button type="primary" ghost>
-                    Primary
-                </Button>
-                <Button icon={<SearchOutlined />}>Search</Button> */}
             </>
         ),
+        children: [
+            {
+                path: '/',
+                element: <Home />,
+            },
+            {
+                path: '/explore',
+                element: <Explore />,
+            },
+        ],
     },
     {
         path: '/login',
