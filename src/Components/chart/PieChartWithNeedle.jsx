@@ -8,10 +8,10 @@ const data = [
     { name: 'B', value: 45, color: '#00ff00' },
     { name: 'C', value: 25, color: '#0000ff' },
 ];
-const w = 200,
-    h = 200;
+const w = 210,
+    h = 100;
 const cx = w / 2;
-const cy = h / 2;
+const cy = h;
 const iR = 50;
 const oR = 100;
 const value = 50;
