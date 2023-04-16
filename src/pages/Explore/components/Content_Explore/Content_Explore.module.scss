@@ -1,0 +1,44 @@
+.wrapper {
+    width: 91%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-direction: column;
+    margin: 0.4% 0;
+}
+
+.statistic {
+}
+
+.content_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0.5% 0;
+}
+
+.content_row_col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 0 0.5%;
+    padding: 1.5%;
+}
+
+#left {
+    flex: 2;
+}
+
+#right {
+    flex: 1;
+}
