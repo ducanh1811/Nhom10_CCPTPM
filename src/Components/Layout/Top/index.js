@@ -1,27 +1,12 @@
 import styles from './Top.module.scss';
-import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faGridRound as faAppleWhole,
-    faGraduationCap as graduationCap,
-    faCaretDown as caretDown,
-    faPersonRifle as user,
-    faCircleXmark as close,
-    faSpinner as loading,
-    faMagnifyingGlass as search,
-} from '@fortawesome/free-solid-svg-icons';
-import Tippy from '@tippyjs/react/headless';
-import iconapp from '~/assets/images';
-import logo from '~/assets/images/logo.jpeg';
-import avatar from '~/assets/images/newcv.jpg';
-import { Wrapper as PopperWrapper } from '~/Components/Popper';
-
 const cx = classNames.bind(styles);
 
 function Top() {
+    const navigate = useNavigate();
     var context = [
-        'Live',
+        'Explore',
         'Inbound',
         'Service Level',
         'Outbound',
@@ -37,7 +22,13 @@ function Top() {
             <div className={cx('inner')}>
                 {context.map((item, index) => {
                     return (
-                        <span className={cx('font-text')} key={index}>
+                        <span
+                            onClick={() => {
+                                navigate(`/${item.toLowerCase()}`);
+                            }}
+                            className={cx('font-text')}
+                            key={index}
+                        >
                             {item}
                         </span>
                     );
