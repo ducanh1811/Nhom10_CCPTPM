@@ -1,52 +1,36 @@
-# my config
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
-  docker: circleci/docker@1.4.0
-
 jobs:
-  build-and-push:
-    environment:
-      DOCKER_IMAGE: nhtua/react-docker
-      DOCKER_TAG: latest
-    executor: docker/docker
+  build:
+    docker:
+      - image: circleci/node:10.16
     steps:
-      - setup_remote_docker
       - checkout
-      - docker/check:
-          docker-username: DOCKER_USER
-          docker-password: DOCKER_PASSWORD
-      - docker/build:
-          image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
-      - docker/push:
-          digest-path: /tmp/digest.txt
-          image: $DOCKER_IMAGE
-          tag: $DOCKER_TAG
-      - run:
-          command: |
-            echo "Digest is: $(</tmp/digest.txt)"
+      - run: npm install
+      - run: npm test
+      - run: npm run build
   deploy:
-    executor: docker/docker
+    docker:
+      - image: circleci/node:10.16
     steps:
-      # Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment
-      - add_ssh_keys:
-          fingerprints:
-            - $SSH_KEY_FINGERPRINT
-      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER@$DEPLOYED_SERVER './deploy.sh'
+      - checkout
+      - run: npm install
+      - run:
+          name: Deploy to Firebase
+          command: |
+            npm install -g firebase-tools
+            firebase deploy --token $FIREBASE_TOKEN
 
 workflows:
-  my-pipeline:
+  version: 2
+  build-and-deploy:
     jobs:
-      - node/test
-      - build-and-push:
-          requires:
-            - node/test
+      - build:
           filters:
             branches:
-              only:
-                - master
-      # uncomment the 3 following lines to enable deploying
-      # - deploy:
-      #     requires:
-      #       - build-and-push
+              only: master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
