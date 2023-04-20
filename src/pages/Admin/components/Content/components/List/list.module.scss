@@ -1,0 +1,21 @@
+.list-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    h1 {
+        flex: 5;
+    }
+
+    .action {
+        font-size: 3rem;
+        width: 100%;
+        display: flex;
+        flex: 1;
+        justify-content: right;
+    }
+}

@@ -14,7 +14,7 @@ export default function Login() {
     function login(username_input, password_input) {
         if ('ducanh' == username_input && 'anh181102' == password_input) {
             localStorage.setItem('isLogin', true);
-            window.location.href = '/home';
+            window.location.href = '/';
         } else alert('Username or Password is incorrect');
     }
     return (
@@ -43,6 +43,17 @@ export default function Login() {
                                 name="password"
                                 type="password"
                                 placeholder="Password"
+                                onKeyDown={() => {
+                                    var username_input =
+                                        document.getElementsByName(
+                                            'username',
+                                        )[0].value;
+                                    var password_input =
+                                        document.getElementsByName(
+                                            'password',
+                                        )[0].value;
+                                    login(username_input, password_input);
+                                }}
                             />
                             <div className={cx('error-input')}></div>
                             <span></span>

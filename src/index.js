@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
-import { Login, CheckLogin, Header } from '~/Components/Layout';
+import { Login, Layout, CheckLogin, Header } from '~/Components/Layout';
+import { Home, Explore } from '~/pages';
+import Admin from '~/pages/Admin/index';
 import GlobalStyle from '~/Components/GlobalStyles/GlobalStyle';
 import {
     Navigate,
@@ -12,27 +14,23 @@ import {
     RouterProvider as RouterProvider,
     createBrowserRouter,
 } from 'react-router-dom';
-import Home from '~/pages/Home/home';
-import Explore from '~/pages/Explore/explore';
 
 const myRouter = createBrowserRouter([
     {
         path: '/',
-        element: (
-            <>
-                <CheckLogin>
-                    <Outlet />
-                </CheckLogin>
-            </>
-        ),
+        element: <Layout />,
         children: [
             {
                 path: '/',
                 element: <Home />,
             },
             {
-                path: '/explore',
+                path: 'explore/',
                 element: <Explore />,
+            },
+            {
+                path: 'admin/',
+                element: <Admin />,
             },
         ],
     },

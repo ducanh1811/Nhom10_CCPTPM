@@ -15,7 +15,6 @@ function Explore() {
     const cx = classNames.bind(styles);
     return (
         <div className={cx('wrapper')}>
-            <Header />
             <Top />
             <Top_Explore />
             <Content_Explore />

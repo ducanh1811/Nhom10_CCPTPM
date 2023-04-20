@@ -16,10 +16,12 @@ import iconapp from '~/assets/images';
 import logo from '~/assets/images/logo.jpeg';
 import avatar from '~/assets/images/newcv.jpg';
 import { Wrapper as PopperWrapper } from '~/Components/Popper';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
 function Header() {
+    const navigate = useNavigate();
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -42,7 +44,13 @@ function Header() {
                     <ul>Voicemail</ul>
                     <ul>Teams</ul>
                     <ul>Reporting</ul>
-                    <ul>Admin</ul>
+                    <ul
+                        onClick={() => {
+                            navigate('/admin');
+                        }}
+                    >
+                        Admin
+                    </ul>
                 </div>
                 <div className={cx('actions')}>
                     <div className={cx('app')}>
