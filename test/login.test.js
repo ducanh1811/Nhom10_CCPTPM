@@ -1,4 +1,8 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
+const { before } = require('@jest/globals');
+const { after } = require('@jest/globals');
+const { expect } = require('@jest/globals');
+
 const chromedriver = require('chromedriver');
 
 describe('Login', function () {
@@ -16,7 +20,7 @@ describe('Login', function () {
             .sendKeys('anh181102', Key.RETURN);
         await driver.wait(until.titleIs('Home Page'), 10000);
         const url = await driver.getCurrentUrl();
-        expect(url).to.equal('http://localhost:3000/home');
+        expect(url).toBe('http://localhost:3000/home');
     });
 
     after(async function () {
