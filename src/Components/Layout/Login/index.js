@@ -8,7 +8,7 @@ export default function Login() {
     // var username = JSON.stringify(localStorage.getItem('username'));
     // var password = JSON.stringify(localStorage.getItem('password'));
     if (isLogin == 'true') {
-        return <Navigate to="/home" />;
+        return <Navigate to="/" />;
     }
 
     function login(username_input, password_input) {

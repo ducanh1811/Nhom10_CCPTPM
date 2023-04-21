@@ -18,7 +18,11 @@ import {
 const myRouter = createBrowserRouter([
     {
         path: '/',
-        element: <Layout />,
+        element: (
+            <CheckLogin>
+                <Layout />
+            </CheckLogin>
+        ),
         children: [
             {
                 path: '/',
