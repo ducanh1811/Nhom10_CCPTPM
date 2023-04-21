@@ -26,6 +26,7 @@ export default function Login() {
                     <div className={cx('inputs')}>
                         <div className={cx('input')}>
                             <input
+                                id="username"
                                 name="username"
                                 type="text"
                                 placeholder="Username"
@@ -40,6 +41,7 @@ export default function Login() {
                     </div> */}
                         <div className={cx('input')}>
                             <input
+                                id="password"
                                 name="password"
                                 type="password"
                                 placeholder="Password"
@@ -65,6 +67,7 @@ export default function Login() {
                     </div> */}
                     </div>
                     <button
+                        id="login-button"
                         onClick={() => {
                             var username_input =
                                 document.getElementsByName('username')[0].value;
