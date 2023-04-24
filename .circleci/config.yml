@@ -1,18 +1,30 @@
 version: 2.1
 
 jobs:
-    build:
-        docker:
-            - image: circleci/node:14-browsers
-        environment:
-            NODE_OPTIONS: --max-old-space-size=4096
-        steps:
-            - checkout
-            - run: npm install
-            - run: npm test
-
+  build:
+    docker:
+      - image: cimg/node:17.0
+    steps:
+      - checkout
+      
+      - run:
+          name: Test Docker
+          command: docker --version
+      # - run:
+      #     name: Start Docker
+      #     command: sudo service docker start
+      - run:
+          name: Install Dependencies
+          command: npm install
+         
+      - run:
+          name: Build and push Docker image
+          command: |
+            docker build -t vohongkhang/react-app:1.0.3 .
+            docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+            docker push vohongkhang/react-app:1.0.3
+        
 workflows:
-    version: 2.1
-    build-and-test:
-        jobs:
-            - build
+  build-and-deploy:
+    jobs:
+      - build
