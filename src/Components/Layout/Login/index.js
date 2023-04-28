@@ -1,10 +1,12 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import styles from './Login.module.scss';
 import classNames from 'classnames/bind';
 export default function Login() {
     const cx = classNames.bind(styles);
-    var isLogin = localStorage.getItem('isLogin');
+    var isLogin = localStorage.getItem('isLogin') || false;
 
+    var user = JSON.parse(localStorage.getItem('listUser_CCPM'));
+    const navigate = useNavigate();
     // var username = JSON.stringify(localStorage.getItem('username'));
     // var password = JSON.stringify(localStorage.getItem('password'));
     if (isLogin === 'true') {
@@ -12,10 +14,15 @@ export default function Login() {
     }
 
     function login(username_input, password_input) {
-        if ('ducanh' === username_input && 'anh181102' === password_input) {
-            localStorage.setItem('isLogin', true);
-            window.location.href = '/';
-        } else alert('Username or Password is incorrect');
+        user.forEach((element) => {
+            if (
+                element.username === username_input &&
+                element.password === password_input
+            ) {
+                localStorage.setItem('isLogin', true);
+                navigate('/');
+            } else alert('Username or Password is incorrect');
+        });
     }
     return (
         <div className={cx('body')}>
@@ -56,6 +63,7 @@ export default function Login() {
                     </div> */}
                     </div>
                     <button
+                        className={cx('login')}
                         id="login-button"
                         onClick={() => {
                             var username_input =
@@ -67,10 +75,17 @@ export default function Login() {
                     >
                         Login
                     </button>
-                    {/* <div className={cx('signup')}>
+                    <div className={cx('signup')}>
                         Already have an account?
-                        <a href="#"> Signup</a>
-                    </div> */}
+                        <a
+                            onClick={() => {
+                                navigate('/register');
+                            }}
+                        >
+                            {' '}
+                            Signup
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

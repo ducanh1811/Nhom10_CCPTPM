@@ -3,7 +3,7 @@ import styles from './list.module.scss';
 import classNames from 'classnames/bind';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { useState } from 'react';
-const originData = JSON.parse(localStorage.getItem('listUsers_CCPM')) || [];
+const originData = JSON.parse(localStorage.getItem('listUser_CCPM')) || [];
 // const originData = [];
 // for (let i = 0; i < 500; i++) {
 //     originData.push({
@@ -83,7 +83,7 @@ function ListUser() {
         if (index > -1) {
             newData.splice(index, 1);
             setData(newData);
-            localStorage.setItem('listUsers_CCPM', JSON.stringify(newData));
+            localStorage.setItem('listUser_CCPM', JSON.stringify(newData));
         }
     };
 
@@ -108,7 +108,7 @@ function ListUser() {
                 setData(newData);
                 setEditingKey('');
             }
-            localStorage.setItem('listUsers_CCPM', JSON.stringify(newData));
+            localStorage.setItem('listUser_CCPM', JSON.stringify(newData));
         } catch (errInfo) {
             console.log('Validate Failed:', errInfo);
         }

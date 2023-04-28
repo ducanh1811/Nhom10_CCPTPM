@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
-import { Login, Layout, CheckLogin, Header } from '~/Components/Layout';
+import { Login, Layout, CheckLogin, Header, SignUp } from '~/Components/Layout';
 import { Home, Explore } from '~/pages';
 import Admin from '~/pages/Admin/index';
 import GlobalStyle from '~/Components/GlobalStyles/GlobalStyle';
@@ -43,6 +43,14 @@ const myRouter = createBrowserRouter([
         element: (
             <>
                 <Login />
+            </>
+        ),
+    },
+    {
+        path: '/register',
+        element: (
+            <>
+                <SignUp />
             </>
         ),
     },
