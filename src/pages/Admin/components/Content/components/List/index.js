@@ -197,17 +197,17 @@ function ListUser() {
         <div className={cx('list-user')}>
             <div className={cx('title')}>
                 <h1>LIST USER</h1>
-                <div className={cx('action')}>
+                {/* <div className={cx('action')}>
                     <PlusCircleOutlined
                         onClick={() => {
                             handleAdd();
-                        }}
+                        }}  
                         style={{
                             margin: 'auto',
                             color: '#08c',
                         }}
                     />
-                </div>
+                </div> */}
             </div>
             <Form form={form} component={false}>
                 <Table
