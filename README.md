@@ -21,13 +21,13 @@ https://www.figma.com/file/2f3cwCnj7wx0NHlCfcLELJ/Web_Nhom10?node-id=0-1&t=dMaWu
 # react-docker-cd-ci
 circle ci
 
-## Run LOcally
-# Clone the project
+# Run Locally
+## Clone the project
 git clone https://github.com/VoHongKhang/Nhom10_CCPTPM.git
-# Go to the project directory 
+## Go to the project directory 
 cd client
-# Install dependencies
+## Install dependencies
 npm install
-# Start the server
+## Start the server
 npm start
 
