@@ -20,7 +20,7 @@ Phát triển giao diện, xử lý cho hệ thống tương tự https://www.ta
 ## Clone the project
 git clone https://github.com/VoHongKhang/Nhom10_CCPTPM.git
 ## Go to the project directory 
-cd client
+cd Nhom10_CCPTPM
 ## Install dependencies
 npm install
 ## Start the server
