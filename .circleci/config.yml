@@ -1,0 +1,31 @@
+version: 2.1
+orbs:
+  docker: circleci/docker@1.1.0
+jobs:
+  build:
+    docker:
+      - image: cimg/node:17.0
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Test Docker
+          command: docker --version
+      # - run:
+      #     name: Start Docker
+      #     command: sudo service docker start
+      - run:
+          name: Install Dependencies
+          command: npm install
+         
+      - run:
+          name: Build and push Docker image
+          command: |
+            docker build -t vohongkhang/react-app:1.0.3 .
+            docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+            docker push vohongkhang/react-app:1.0.3
+         
+workflows:
+  build-and-deploy:
+    jobs:
+      - build

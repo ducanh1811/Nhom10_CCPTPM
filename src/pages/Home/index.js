@@ -4,6 +4,7 @@ import {
     Login,
     CheckLogin,
     Header,
+    Footer,
     Top,
     Content_Home,
 } from '~/Components/Layout';
@@ -11,7 +12,6 @@ function Home() {
     const cx = classNames.bind(styles);
     return (
         <>
-            <Header />
             <Top />
             <Content_Home />
         </>
