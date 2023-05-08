@@ -19,7 +19,7 @@ jobs:
           command: npm install
       - run:
           command: npm test
-          working_directory: /home/circleci/project/test
+    
       - run:
           name: Build and push Docker image
           command: |
